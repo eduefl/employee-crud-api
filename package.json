@@ -2,22 +2,45 @@
   "name": "employee-crud-api",
   "version": "1.0.0",
   "description": "Crud aplication with API in node JS",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemom",
+    "lint": "eslint --ext .js, .html -f ./node_modules/eslint-friendly-formatter . --fix",
+    "prepush": "npn run lint",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/eduefl/employee-crud-api.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "nodejs",
+    "api",
+    "crud",
+    "azure",
+    "express",
+    "postgree",
+    "javascript",
+    "swa"   
+  ],
+  "author": "eduardo.Flima",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/eduefl/employee-crud-api/issues"
   },
   "homepage": "https://github.com/eduefl/employee-crud-api#readme",
   "devDependencies": {
-    "eslint": "^8.10.0"
+    "eslint": "^8.10.0",
+    "husky": "^7.0.4",
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "express": "^4.17.3",
+    "express-promise": "^0.4.0",
+    "express-promise-router": "^4.1.1",
+    "pg": "^8.7.3"
   }
 }
