@@ -16,7 +16,7 @@ const app = express();
 
 const index = require('./routes/index');
 
-//const employeeRoute = require('./routes/employee.routes');
+const employeeRoute = require('./routes/employee.routes');
 
 app.use(express.urlencoded({ extended: true}));
 
@@ -28,6 +28,6 @@ app.use(cors())
 
 app.use(index);
 
-//app.use('/api/',employeeRoute);
+app.use('/api/',employeeRoute);
 
 module.exports = app;
