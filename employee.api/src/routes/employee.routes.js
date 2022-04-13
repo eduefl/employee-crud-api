@@ -22,8 +22,11 @@
   router.get('/getempbyid/:id',employeeController.getEmployeeById);
 
   //Usando Query params
-  //  // => Rota responsavel por listar um colaborador por ID: (Get): localhost:3000/api/getempbyid/:id
+  //  // => Rota responsavel por listar um colaborador por ID: (Get): localhost:3000/api/getempbyid/?id=
   //  router.get('/getempbyid/',employeeController.getEmployeeById);
+
+    // => Rota responsavel por atualizar um determinado colaborador por ID: (PUT): localhost:3000/api/putempbyid/:id
+    router.put ('/putempbyid/:id',employeeController.updEmployeebyId);
 
 
   //Chekar explicacao : https://pt.linkedin.com/pulse/entendendo-par%C3%A2metros-em-requisi%C3%A7%C3%B5es-de-uma-vez-por-todas-henrique
