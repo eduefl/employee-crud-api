@@ -11,8 +11,10 @@
  
  // => Definindo as rotas do CRUD = 'employee'
  
- // => Rota responsavel pr criar um novo 'Colaborador': (POST): localhost:3000api/employees
+ // => Rota responsavel por criar um novo 'Colaborador': (POST): localhost:3000/api/employees 
+ router.post('/employees',employeeController.createEmployee);
  
- router.post('/employees',employeeController.createEmployee)
+ // => Rota responsavel por listar todos os colaboradores: (Get): localhost:3000/api/listallemployees
+ router.get('/listallemployees',employeeController.listAllEmployees);
  
  module.exports = router;  

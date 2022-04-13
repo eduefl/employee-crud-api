@@ -25,3 +25,9 @@ exports.createEmployee  = async(req,res) =>{
 };
 
 
+
+//=>method responsible for to list all the empoyees: 
+exports.listAllEmployees = async(req,res) =>{
+  const response = await db.query('select * from employee order by salary DESC') ;  
+  res.status(200).send(response.rows);
+}
