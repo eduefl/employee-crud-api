@@ -31,3 +31,15 @@ exports.listAllEmployees = async(req,res) =>{
   const response = await db.query('select * from employee order by salary DESC') ;  
   res.status(200).send(response.rows);
 }
+
+
+
+//=>method responsible for to list some empoyee searching by ID: 
+exports.getEmployeeById = async(req,res) =>{
+    //Usando Params 
+  const employeeId = req.params.id
+  //Usando Query params
+//  const employeeId = req.query.id
+  const response = await db.query('select * from employee where employee_id = $1',[employeeId]) ;  
+  res.status(200).send(response.rows);
+}
