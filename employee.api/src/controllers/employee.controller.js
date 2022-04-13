@@ -64,3 +64,12 @@ exports.updEmployeebyId = async(req,res) =>{
 })
 
 }
+
+//=>method responsible for delete some employee searching by ID: 
+
+exports.delEmployeebyId = async(req,res) =>{
+  const employeeId = req.params.id
+  await db.query('delete from employee where employee_id = $1',[employeeId]) ;  
+  res.status(200).send({message: 'Employee FIRED successfully!' });
+
+}
